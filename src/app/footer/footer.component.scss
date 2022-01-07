@@ -1,0 +1,11 @@
+@import '../../assets/ex';
+footer{
+    font-size: 110%;
+    .links{
+        transition: .2s;
+        &:hover{
+            cursor: pointer;
+            color: $purple;
+        }
+    }
+}

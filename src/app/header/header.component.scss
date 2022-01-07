@@ -1,6 +1,8 @@
 @import "../../assets/ex";
 header {
   background-color: $purple;
+  position: relative;
+  z-index: -1;
   .row {
     h1 {
       font-size: 300%;
@@ -36,13 +38,18 @@ header {
     }
     @media only screen and (min-width: 992px) {
       .text-box {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
     }
   }
   @media only screen and (max-width: 768px) {
     .row {
       padding: 0 24px;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .row {
+      padding: 0 48px;
     }
   }
 }
