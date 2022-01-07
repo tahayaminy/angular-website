@@ -1,0 +1,360 @@
+@import "../../assets/ex";
+
+.logo {
+  cursor: pointer;
+}
+
+.large-menu {
+  margin-left: 1em;
+  & > li {
+    display: inline;
+    padding: 1em 0.5em;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s;
+    span {
+      color: $black;
+    }
+    ul {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      opacity: 0;
+      transition: 0.3s ease-out;
+      top: 200%;
+      left: 0;
+      visibility: hidden;
+      background-color: white;
+      border-radius: 0.5em;
+      min-width: 250px;
+      box-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 0.1),
+        -1px -1px 5px rgba($color: #000000, $alpha: 0.1);
+      padding: 0.5em 0;
+      & > span {
+        padding: 0.5em;
+        color: rgba($color: #000000, $alpha: 0.5);
+        cursor: default;
+      }
+      li {
+        padding: 0.5em;
+        transition: 0.2s;
+        .fa-file-alt,
+        .fa-layer-group {
+          font-size: 20px;
+          color: $purple;
+        }
+        b {
+          margin-top: 0.5em;
+          margin-bottom: 1em;
+          display: inline-block;
+        }
+        span {
+          color: rgba($color: #000000, $alpha: 0.5);
+        }
+        .version {
+          color: $purple;
+        }
+      }
+      hr {
+        margin: 0;
+      }
+    }
+    &:hover {
+      color: $purple;
+      & > ul {
+        opacity: 1;
+        visibility: visible;
+        top: 99%;
+        & > li {
+          &:hover {
+            background-color: $primary;
+            color: $purple;
+          }
+        }
+      }
+    }
+  }
+}
+
+.search-box {
+  margin-left: 1em;
+  span {
+    padding-left: 1em;
+  }
+  input {
+    border: 1px solid $secondary;
+    color: $black;
+    border-radius: 5px;
+    padding-left: 3em;
+    &:focus {
+      outline: 5px solid rgba($color: $purple, $alpha: 0.3);
+      border-color: $purple;
+    }
+  }
+  @media only screen and (max-width: 992px) {
+    width: 100%;
+    padding-left: 0;
+    margin-left: 0;
+    input {
+      width: 100%;
+    }
+  }
+  .fa-search {
+    color: $secondary;
+  }
+}
+
+@mixin navItemHover {
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    color: $purple;
+  }
+}
+
+.fa-ellipsis-h {
+  @include navItemHover;
+  ul {
+    font-weight: normal;
+  }
+}
+.fa-bell {
+  background-color: #f5f4f8;
+  color: $secondary;
+  @include navItemHover;
+}
+
+.nav-pannel {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  ul {
+    li {
+      display: inline-block;
+      margin: 0 0.5em;
+    }
+  }
+  .pannel-options {
+    width: 39px;
+    height: 39px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .notice-sign {
+    width: 11px;
+    height: 11px;
+    background-color: #754ffe;
+    border: 0.15em solid white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-25%, -50%);
+  }
+  #dropdown-notice::after {
+    display: none;
+  }
+  .dropdown-notice {
+    @media only screen and (max-width:425px){
+      width: 300px;
+      left: -45vw !important;
+    }
+    @media only screen and (min-width:425px) and (max-width:768px){
+      width: 300px;
+      left: -150px !important;
+    }
+    @media only screen and(min-width:768px){
+      width: 500px;
+      left: -450px !important;
+    }
+    font-size: 14px;
+    border-radius: 1em;
+    .header-notice {
+      padding: 1em 1em 0 1em;
+      &:hover .fa-cog {
+        transition: .2s;
+        color: $purple;
+        cursor: pointer;
+      }
+    }
+    .footer-notice {
+      p {
+        color: $secondary;
+        transition: 0.2s;
+        &:hover {
+          color: $purple;
+        }
+      }
+      padding: 1em;
+      cursor: pointer;
+    }
+
+    #box-notices {
+      @include customScroll("&");
+      max-height: 275px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      & > div {
+        padding: 1em 1em;
+      }
+      & > .row {
+        &:hover {
+          cursor: pointer;
+          & .notic-text {
+            transition: 0.2s;
+            color: $purple;
+          }
+        }
+      }
+      & > .first-row {
+        background-color: $primary;
+      }
+      img {
+        width: 39px;
+        height: 39px;
+        border-radius: 50%;
+      }
+      .notice-date {
+        color: $secondary;
+      }
+      .notic-circle {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 10px;
+      }
+      .fa-times {
+        font-size: 13px;
+      }
+      .txt-info {
+        color: #29baf9;
+      }
+    }
+    hr {
+      margin: 0;
+    }
+  }
+  .profile {
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .online-sign {
+    width: 11px;
+    height: 11px;
+    background-color: #19cb98;
+    border: 0.15em solid white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(25%, 50%);
+  }
+  .dropdown-profile {
+    @media only screen and(max-width:425px){
+      left: -400% !important;
+    }
+    @media only screen and(min-width:425px){
+      left: -500% !important;
+    }
+    font-size: 14px;
+    border-radius: 1em;
+    .profile-item {
+      transition: 0.2s;
+      .profile-img {
+        width: 35px;
+        height: 35px;
+        margin-top: 0.5em;
+        margin-left: 1em;
+      }
+    }
+    .profile-item:hover {
+      background-color: $primary;
+      cursor: pointer;
+    }
+    & > section {
+      margin: 0.4em 0;
+      & > .information {
+        margin-left: 3.5em;
+        .email {
+          color: $secondary;
+        }
+      }
+      p {
+        padding: 0.5em 1.5em;
+        margin: 0;
+      }
+    }
+    hr {
+      margin: 0;
+    }
+  }
+
+  .fa-bars {
+    font-size: 20px;
+
+    color: $purple;
+    cursor: pointer;
+  }
+  .bars {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    position: absolute;
+    display: inline-flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid $purple;
+    cursor: pointer;
+    .me-bar {
+      width: 15px;
+      height: 2px;
+      background-color: $purple;
+      margin: 1px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+  }
+}
+/*small menu*/
+
+.ul-block {
+  padding: 1em 0;
+  li {
+    display: block;
+    padding: 0.5em 0;
+    span {
+      float: right;
+    }
+    border-bottom: 1px solid $primary;
+  }
+}
+.small-menu {
+  padding: 1em 0;
+  & > li {
+    display: block;
+    padding: 0.5em 0;
+    transition: 0.2s;
+    &:hover {
+      cursor: pointer;
+      color: $purple;
+    }
+    border-bottom: 1px solid $primary;
+    ul {
+      display: none;
+      margin: 1em 0.5em 0 0.5em;
+      padding: 1em;
+      border-radius: 1em;
+      box-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 0.1),
+        -1px -1px 5px rgba($color: #000000, $alpha: 0.1);
+      & > li {
+        display: block;
+        padding: 0.5em 0;
+        transition: 0.2s;
+        &:hover {
+          cursor: pointer;
+          color: $purple;
+        }
+      }
+    }
+  }
+}
