@@ -1,0 +1,71 @@
+@import "../../assets/ex";
+header {
+  background-color: $purple;
+  .row {
+    h1 {
+      font-size: 300%;
+      font-weight: bolder;
+      color: $primary;
+    }
+    p {
+      font-size: 150%;
+      color: $secondary;
+      font-weight: 500;
+      margin-top: 10px;
+    }
+    .text-box > span {
+      padding: 10px;
+      border-radius: 5px;
+      display: inline-block;
+      cursor: pointer;
+      &:nth-child(3) {
+        background-color: $green;
+        color: $primary;
+        font-weight: bolder;
+        margin: 20px 5px 10px 5px;
+        transition: 0.2s;
+        &:hover {
+          background-color: #18ae84;
+        }
+      }
+      &:last-child {
+        background-color: $primary;
+        color: $black;
+        margin: 10px 5px 20px 5px;
+      }
+    }
+    @media only screen and (min-width: 992px) {
+      .text-box {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .row {
+      padding: 0 24px;
+    }
+  }
+}
+.intro {
+    background-color: white;
+    @media only screen and (min-width:992px){
+        justify-content: center;
+    }
+    &> div {
+        & > div {
+          background-color: rgba($color: $warning, $alpha: 0.3);
+          i {
+            color: $darkwarn;
+          }
+        }
+        p {
+          font-size: 110%;
+          b {
+            font-size: 105%;
+          }
+          span {
+            color: $secondary;
+          }
+        }
+      }
+}
