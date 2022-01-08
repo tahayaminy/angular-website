@@ -1,0 +1,76 @@
+$purple: #754ffe;
+$secondary: #a8a3b9;
+$primary: #ecebf1;
+$black: #18113c;
+$green: #19cb98;
+$warning: #ffaa46;
+$darkwarn: #c28135;
+$cardtxt: #00000096;
+$receptions: #00000038;
+
+article {
+  .card {
+    p {
+      color: $cardtxt;
+      font-weight: 500;
+      & > i,
+      & > span {
+        color: $cardtxt;
+      }
+      & > .receptions {
+        position: relative;
+        .holder {
+          color: $receptions;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        .value {
+          color: $purple;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .span-block {
+        display: block;
+        margin: 10px 0;
+        &>.people{
+            color: $receptions;
+        }
+        .del{
+            text-decoration: line-through;
+            color: $secondary;
+            font-size: 90%;
+            font-weight: 400;
+        }        
+      }
+      
+      
+    }
+    .card-footer {
+      background-color: white;
+      color: $cardtxt;
+      font-weight: 500;
+      i {
+        color: $cardtxt;
+      }
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 10px;
+      }
+      span:hover{
+          cursor: pointer;
+      }
+    }
+    &:hover{
+        transition: .2s;
+        box-shadow: 0px 0px 10px 2px rgba($color: #000000, $alpha: 0.1),
+        -0px -0px 10px 2px rgba($color: #000000, $alpha: 0.1);
+    }
+  }
+}
