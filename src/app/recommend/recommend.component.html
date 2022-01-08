@@ -1,0 +1,44 @@
+<br><br><br><br><br>
+<article class="container">
+    
+<h3 class="ml-0 mb-2">Recommended to you</h3>
+  <section class="row p-5 position-relative">
+    <swiper
+    class="p-3"
+      [config]="config"
+      (swiper)="onSwiper($event)"
+      (slideChange)="onSlideChange()"
+      [navigation]="true"
+      [breakpoints]="{
+        '0': {
+          slidesPerView: 1
+        },
+        '768': {
+          slidesPerView: 2
+        },
+        '992': {
+          slidesPerView: 4
+        }
+      }"
+      [autoplay]="{
+        delay: 2500,
+        disableOnInteraction: false
+      }"
+      [loop]="true"
+      
+    >
+      <ng-template swiperSlide><app-cards></app-cards></ng-template>
+      <ng-template swiperSlide><app-cards></app-cards></ng-template>
+      <ng-template swiperSlide><app-cards></app-cards></ng-template>
+      <ng-template swiperSlide><app-cards></app-cards></ng-template>
+      <ng-template swiperSlide><app-cards></app-cards></ng-template>
+      <ng-template swiperSlide><app-cards></app-cards></ng-template>
+    </swiper>
+    <span class="d-none d-md-inline custom-button-prev position-absolute fas fa-chevron-left rounded-circle"></span>
+    <span class="d-none d-md-inline custom-button-next position-absolute fas fa-chevron-right rounded-circle"></span>
+    <div class="d-inline-flex mt-3 d-md-none justify-content-center w-100">
+        <span class="m-1 custom-button-prev fas fa-chevron-left rounded-circle"></span>
+        <span class="m-1 custom-button-next fas fa-chevron-right rounded-circle"></span>
+    </div>
+  </section>
+</article>

@@ -10,9 +10,7 @@ export class CardsComponent implements OnInit {
   tst:any='sss';
   ngOnInit(): void {}
 
-  x(an:any){
-    console.log(an);
-  }
+  
   bookmark(product: any) {
     if (product.children[1].classList.contains('d-none')) {
       product.children[0].classList.add('d-none');

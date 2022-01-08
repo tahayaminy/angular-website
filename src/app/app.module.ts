@@ -8,6 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CardsComponent } from './cards/cards.component';
+import { SwiperModule } from 'swiper/angular';
+import { RecommendComponent } from './recommend/recommend.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { CardsComponent } from './cards/cards.component';
     NavbarComponent,
     HeaderComponent,
     FooterComponent,
-    CardsComponent
+    CardsComponent,
+    RecommendComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

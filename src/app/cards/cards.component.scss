@@ -7,8 +7,7 @@ $warning: #ffaa46;
 $darkwarn: #c28135;
 $cardtxt: #00000096;
 $receptions: #00000038;
-
-article {
+ 
   .card {
     p {
       color: $cardtxt;
@@ -73,4 +72,3 @@ article {
         -0px -0px 10px 2px rgba($color: #000000, $alpha: 0.1);
     }
   }
-}

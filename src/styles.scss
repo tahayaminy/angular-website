@@ -2,6 +2,8 @@
 
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
+@import '~swiper/css';
+@import '~swiper/css/bundle';
 @import './assets/ex';
 
 body{

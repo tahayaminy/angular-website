@@ -1,0 +1,55 @@
+@import "../../assets/ex";
+.swiper-scrollbar {
+  @include hideScroll("&");
+  display: none;
+}
+@media only screen and (max-width:768px) {
+  .custom-button-next,.custom-button-prev{
+    position: relative;
+    z-index: 15;
+    font-size: 125%;
+    background-color: white;
+    width: 32px;
+    height: 32px;
+    color: $secondary;
+    &::before{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+}
+@media only screen and (min-width:768px) {
+  .custom-button-prev {
+    transform: translate(50%, -50%);
+    left: -0.7em;
+  }
+  .custom-button-next {
+    transform: translate(-50%, -50%);
+    right: -0.7em;
+  }
+  .custom-button-next,.custom-button-prev{
+    top: 50%;
+    z-index: 15;
+    font-size: 125%;
+    background-color: white;
+    width: 32px;
+    height: 32px;
+    color: $secondary;
+    &::before{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+}
+.custom-button-next,.custom-button-prev{
+  &:hover{
+    transition: .5s;
+    color: white;
+    background-color: $purple;
+    cursor: pointer;
+  }
+}
