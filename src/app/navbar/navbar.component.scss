@@ -2,6 +2,10 @@
 
 nav{
   background-color: white;
+  @media only screen and(max-width:992px){
+    padding-bottom: 1.1em;
+    padding-top:1.1em;
+  }
   .logo {
     cursor: pointer;
   }
