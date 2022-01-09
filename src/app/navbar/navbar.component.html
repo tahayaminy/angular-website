@@ -1,10 +1,10 @@
-<nav class="container-fluid p-3 border-bottom">
-  <div class="d-flex align-items-center position-relative">
-    <img class="logo" src="../assets/logo.svg" />
-    <div class="d-none d-lg-block">
+<nav class="container-fluid border-bottom">
+  <div class="d-flex align-items-baseline position-relative">
+    <img class="logo align-self-center" src="../assets/logo.svg" />
+    <div class="d-none d-lg-flex align-items-center">
       <ul class="d-inline large-menu">
         <li>
-          Browse <span class="fas fa-angle-down"></span>
+          Browse <span class="fas fa-angle-down ml-2"></span>
           <ul>
             <li *ngFor="let mockItem of mockItems">
               {{mockItem.name}} <i *ngIf="mockItem.hasSubMenu" class="float-right fas fa-angle-right"></i>
@@ -12,7 +12,7 @@
           </ul>
         </li>
         <li>
-          Landings <span class="fas fa-angle-down"></span>
+          Landings <span class="fas fa-angle-down ml-2"></span>
           <ul>
             <span class="font-weight-bold">LANDINGS</span>
             <li>Courses</li>
@@ -22,7 +22,7 @@
           </ul>
         </li>
         <li>
-          Pages <span class="fas fa-angle-down"></span>
+          Pages <span class="fas fa-angle-down ml-2"></span>
           <ul>
             <li>Courses <i class="float-right fas fa-angle-right"></i></li>
             <li>Path <i class="float-right fas fa-angle-right"></i></li>
@@ -31,17 +31,18 @@
             <li>Specialty <i class="float-right fas fa-angle-right"></i></li>
             <hr />
             <li>
-              About <span class="bg-success text-white rounded p-1">New</span>
-              <i class="float-right fas fa-angle-right"></i>
+              About
+              
             </li>
-            <li>Help Center</li>
+            <li>Help Center <span class="bg-success text-white rounded ml-2 px-2 font-size-90">New</span>
+              <i class="float-right fas fa-angle-right"></i></li>
             <li>Pricing</li>
             <li>Compare Plane</li>
             <li>Contact</li>
           </ul>
         </li>
         <li>
-          Accounts <span class="fas fa-angle-down"></span>
+          Accounts <span class="fas fa-angle-down ml-2"></span>
           <ul>
             <span class="font-weight-bold">ACCOUNTS</span>
             <li>Instructor <i class="float-right fas fa-angle-right"></i></li>
@@ -60,7 +61,7 @@
             <li>Linked Accounts</li>
           </ul>
         </li>
-        <li class="fas fa-ellipsis-h">
+        <li class="fas fa-ellipsis-h ml-2">
           <ul>
             <li class="d-flex align-items-center">
               <i class="far fa-file-alt px-3"></i>
@@ -82,10 +83,10 @@
         </li>
       </ul>
       <form
-        class="d-inline-flex align-items-center position-relative search-box"
+        class="d-inline-flex ml-4 align-items-center position-relative search-box"
       >
         <span class="position-absolute"><i class="fas fa-search"></i></span>
-        <input class="py-3" type="search" placeholder="Search Courses" />
+        <input class="" type="search" placeholder="Search Courses" />
       </form>
     </div>
     <div class="nav-pannel">
@@ -308,10 +309,10 @@
           <li>Specialty <i class="float-right fas fa-angle-right"></i></li>
           <hr />
           <li>
-            About <span class="bg-success text-white rounded p-1">New</span>
-            <i class="float-right fas fa-angle-right"></i>
+            About
           </li>
-          <li>Help Center</li>
+          <li>Help Center <span class="bg-success text-white rounded ml-2 px-2 font-size-90">New</span>
+            <i class="float-right fas fa-angle-right"></i></li>
           <li>Pricing</li>
           <li>Compare Plane</li>
           <li>Contact</li>
