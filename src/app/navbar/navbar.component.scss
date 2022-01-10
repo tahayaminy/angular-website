@@ -138,12 +138,7 @@ nav{
       font-weight: normal;
     }
   }
-  .fa-bell {
-    background-color: #f5f4f8;
-    color: $secondary;
-    @include navItemHover;
-  }
-  
+ 
   .nav-pannel {
     position: absolute;
     right: 0;
@@ -156,158 +151,51 @@ nav{
       }
     }
     .pannel-options {
-      width: 39px;
-      height: 39px;
       font-size: 20px;
       cursor: pointer;
+      background-color: #f5f4f8;
     }
     .notice-sign {
       width: 11px;
       height: 11px;
       background-color: #754ffe;
-      border: 0.15em solid white;
+      border: 0.1em solid white;
       position: absolute;
       right: 0;
       top: 0;
-      transform: translate(-25%, -50%);
     }
+    .notific{
+      width: 39px;
+      height: 39px;
+      position: relative;
+      border-radius: 50%;
+      &:hover{
+        i{
+          transition: .2s;
+          color: $purple !important;}
+      }
+      i{
+        transform: translate(13.5px,3px);
+        font-size: 15px;
+        color: $secondary;
+      }
+    }
+
     #dropdown-notice::after {
       display: none;
     }
-    .dropdown-notice {
-      @media only screen and (max-width:425px){
-        width: 300px;
-        left: -45vw !important;
-      }
-      @media only screen and (min-width:425px) and (max-width:768px){
-        width: 300px;
-        left: -150px !important;
-      }
-      @media only screen and(min-width:768px){
-        width: 500px;
-        left: -450px !important;
-      }
-      font-size: 14px;
-      border-radius: 1em;
-      .header-notice {
-        padding: 1em 1em 0 1em;
-        &:hover .fa-cog {
-          transition: .2s;
-          color: $purple;
-          cursor: pointer;
-        }
-      }
-      .footer-notice {
-        p {
-          color: $secondary;
-          transition: 0.2s;
-          &:hover {
-            color: $purple;
-          }
-        }
-        padding: 1em;
-        cursor: pointer;
-      }
-  
-      #box-notices {
-        @include customScroll("&");
-        max-height: 275px;
-        overflow-y: auto;
-        overflow-x: hidden;
-        & > div {
-          padding: 1em 1em;
-        }
-        & > .row {
-          &:hover {
-            cursor: pointer;
-            & .notic-text {
-              transition: 0.2s;
-              color: $purple;
-            }
-          }
-        }
-        & > .first-row {
-          background-color: $primary;
-        }
-        img {
-          width: 39px;
-          height: 39px;
-          border-radius: 50%;
-        }
-        .notice-date {
-          color: $secondary;
-        }
-        .notic-circle {
-          display: block;
-          margin-bottom: 10px;
-          font-size: 10px;
-        }
-        .fa-times {
-          font-size: 13px;
-        }
-        .txt-info {
-          color: #29baf9;
-        }
-      }
-      hr {
-        margin: 0;
-      }
-    }
-    .profile {
-      width: 39px;
-      height: 39px;
-      border-radius: 50%;
-      cursor: pointer;
-    }
+    
+    
     .online-sign {
       width: 11px;
       height: 11px;
       background-color: #19cb98;
-      border: 0.15em solid white;
+      border: 0.1em solid white;
       position: absolute;
       right: 0;
       bottom: 0;
-      transform: translate(25%, 50%);
     }
-    .dropdown-profile {
-      @media only screen and(max-width:425px){
-        left: -400% !important;
-      }
-      @media only screen and(min-width:425px){
-        left: -500% !important;
-      }
-      font-size: 14px;
-      border-radius: 1em;
-      .profile-item {
-        transition: 0.2s;
-        .profile-img {
-          width: 35px;
-          height: 35px;
-          margin-top: 0.5em;
-          margin-left: 1em;
-        }
-      }
-      .profile-item:hover {
-        background-color: $primary;
-        cursor: pointer;
-      }
-      & > section {
-        margin: 0.4em 0;
-        & > .information {
-          margin-left: 3.5em;
-          .email {
-            color: $secondary;
-          }
-        }
-        p {
-          padding: 0.5em 1.5em;
-          margin: 0;
-        }
-      }
-      hr {
-        margin: 0;
-      }
-    }
+    
   
     .fa-bars {
       font-size: 20px;
@@ -377,5 +265,132 @@ nav{
         }
       }
     }
+  }
+}
+.profile {
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dropdown-profile {
+  top: -10px;
+  right: 300px;
+  font-size: 14px;
+  &>div{
+
+    border-radius: 1em;
+    .profile-item {
+      transition: 0.2s;
+      .profile-img {
+        width: 35px;
+        height: 35px;
+        margin-top: 0.5em;
+        margin-left: 1em;
+      }
+    }
+    .profile-item:hover {
+      background-color: $primary;
+      cursor: pointer;
+    }
+    & > section {
+      margin: 0.4em 0;
+      & > .information {
+        margin-left: 3.5em;
+        .email {
+          color: $secondary;
+        }
+      }
+      p {
+        padding: 0.5em 1.5em;
+        margin: 0;
+      }
+    }
+    hr {
+      margin: 0;
+    }
+  }
+}
+.dropdown-notice {
+  &>div{border-radius: 1em;}
+  top: -10px;
+  @media only screen and (max-width:425px){
+    width: 300px;
+    right: 3vw !important;
+  }
+  @media only screen and (min-width:425px) and (max-width:768px){
+    width: 350px;
+    right: 15vw !important;
+  }
+  @media only screen and(min-width:768px){
+    width: 500px;
+    right: 100px !important;
+  }
+  font-size: 14px;
+  border-radius: 1em;
+  .header-notice {
+    padding: 1em 1em 0 1em;
+    border-radius: 1em 1em 0 0;
+    &:hover .fa-cog {
+      transition: .2s;
+      color: $purple;
+      cursor: pointer;
+    }
+  }
+  .footer-notice {
+    border-radius: 0 0 1em 1em;
+    p {
+      color: $secondary;
+      transition: 0.2s;
+      &:hover {
+        color: $purple;
+      }
+    }
+    padding: 1em;
+    cursor: pointer;
+  }
+
+  #box-notices {
+    @include customScroll("&");
+    max-height: 275px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    & > div {
+      padding: 1em 1em;
+    }
+    & > .row {
+      &:hover {
+        cursor: pointer;
+        & .notic-text {
+          transition: 0.2s;
+          color: $purple;
+        }
+      }
+    }
+    & > .first-row {
+      background-color: $primary;
+    }
+    img {
+      width: 39px;
+      height: 39px;
+      border-radius: 50%;
+    }
+    .notice-date {
+      color: $secondary;
+    }
+    .notic-circle {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 10px;
+    }
+    .fa-times {
+      font-size: 13px;
+    }
+    .txt-info {
+      color: #29baf9;
+    }
+  }
+  hr {
+    margin: 0;
   }
 }

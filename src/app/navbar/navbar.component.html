@@ -7,7 +7,11 @@
           Browse <span class="fas fa-angle-down ml-2"></span>
           <ul>
             <li *ngFor="let mockItem of mockItems">
-              {{mockItem.name}} <i *ngIf="mockItem.hasSubMenu" class="float-right fas fa-angle-right"></i>
+              {{ mockItem.name }}
+              <i
+                *ngIf="mockItem.hasSubMenu"
+                class="float-right fas fa-angle-right"
+              ></i>
             </li>
           </ul>
         </li>
@@ -30,12 +34,14 @@
             <li>Career <i class="float-right fas fa-angle-right"></i></li>
             <li>Specialty <i class="float-right fas fa-angle-right"></i></li>
             <hr />
+            <li>About</li>
             <li>
-              About
-              
+              Help Center
+              <span class="bg-success text-white rounded ml-2 px-2 font-size-90"
+                >New</span
+              >
+              <i class="float-right fas fa-angle-right"></i>
             </li>
-            <li>Help Center <span class="bg-success text-white rounded ml-2 px-2 font-size-90">New</span>
-              <i class="float-right fas fa-angle-right"></i></li>
             <li>Pricing</li>
             <li>Compare Plane</li>
             <li>Contact</li>
@@ -90,166 +96,31 @@
       </form>
     </div>
     <div class="nav-pannel">
-      <ul class="d-inline">
-        <li class="position-relative">
-          <div class="d-inline rounded-circle position-relative" ngbDropdown>
-            <i
-              class="far fa-bell pannel-options rounded-circle p-2 text-center"
-              id="dropdown-notice"
-              ngbDropdownToggle
-            ></i>
-            <span class="position-absolute notice-sign rounded-circle"></span>
-            <div
-              class="dropdown-notice"
-              ngbDropdownMenu
-              aria-labelledby="dropdown-notice"
-            >
-              <div class="header-notice">
-                <p class="float-left mb-0">Notifications</p>
-                <p class="float-right fas fa-cog"></p>
-              </div>
-              <div class="float-none"></div>
-              <br />
-              <br />
-              <hr class="mb-1" />
-              <div id="box-notices">
-                <div class="row first-row">
-                  <div class="d-flex col-11">
-                    <img src="../assets/avatar-1.jpg" />
-                    <div class="ml-2">
-                      <span class="font-weight-bold">Kristin Watson:</span>
-                      <br /><span class="notic-text"
-                        >Krisitn Watsan like your comment on course Javascript </span
-                      ><br /><br />
-                      <p>
-                        <span class="far fa-thumbs-up text-success"></span
-                        ><span class="notice-date"> 2 hours ago, 2:19 PM</span>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-1 p-0 text-center">
-                    <i class="notic-circle fas fa-circle txt-info"></i>
-                    <i class="fas fa-times notic-circle text-dark"></i>
-                  </div>
-                </div>
-                <hr />
-                <div class="row">
-                  <div class="d-flex col-11">
-                    <img src="../assets/avatar-1.jpg" />
-                    <div class="ml-2">
-                      <span class="font-weight-bold">Kristin Watson:</span>
-                      <br /><span class="notic-text"
-                        >Krisitn Watsan like your comment on course Javascript </span
-                      ><br /><br />
-                      <p>
-                        <span class="far fa-thumbs-up text-success"></span
-                        ><span class="notice-date"> 2 hours ago, 2:19 PM</span>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-1 p-0 text-center text-dark">
-                    <i class="notic-circle fas fa-circle"></i>
-                  </div>
-                </div>
-                <hr />
-                <div class="row">
-                  <div class="d-flex col-11">
-                    <img src="../assets/avatar-1.jpg" />
-                    <div class="ml-2">
-                      <span class="font-weight-bold">Kristin Watson:</span>
-                      <br /><span class="notic-text"
-                        >Krisitn Watsan like your comment on course Javascript </span
-                      ><br /><br />
-                      <p>
-                        <span class="far fa-thumbs-up txt-info"></span
-                        ><span class="notice-date"> 2 hours ago, 2:19 PM</span>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-1 p-0 text-center text-dark">
-                    <i class="notic-circle fas fa-circle"></i>
-                  </div>
-                </div>
-                <hr />
-                <div class="row">
-                  <div class="d-flex col-11">
-                    <img src="../assets/avatar-1.jpg" />
-                    <div class="ml-2">
-                      <span class="font-weight-bold">Kristin Watson:</span>
-                      <br /><span class="notic-text"
-                        >Krisitn Watsan like your comment on course Javascript </span
-                      ><br /><br />
-                      <p>
-                        <span class="fas fa-award text-warning"></span
-                        ><span class="notice-date"> 2 hours ago, 2:19 PM</span>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-1 p-0 text-center text-dark">
-                    <i class="notic-circle fas fa-circle"></i>
-                  </div>
-                </div>
-              </div>
-              <hr />
-              <div class="footer-notice">
-                <p class="font-weight-bold">See all Notifications</p>
-              </div>
-            </div>
+      <ul class="d-inline-flex align-items-center">
+        <li class="d-inline-block">
+          <div
+            class="d-inline-block notific position-relative pannel-options"
+            (click)="$event.stopPropagation(); dropdownNotice.open()"
+          >
+            <i class="far fa-bell rounded-circle" id="dropdown-notice"></i>
+            <span
+              class="position-absolute notice-sign rounded-circle border-white"
+            ></span>
           </div>
         </li>
-        <li class="position-relative">
-          <div class="d-inline" ngbDropdown>
+        <li class="d-inline-block">
+          <div
+            class="d-inline-block position-relative pannel-options"
+            (click)="$event.stopPropagation(); dropdownProfile.open()"
+          >
             <img
               class="profile rounded-circle"
               src="../assets/avatar-1.jpg"
               id="dropdownProfile"
-              ngbDropdownToggle
             />
             <span
               class="position-absolute online-sign rounded-circle border-white"
             ></span>
-            <div
-              class="dropdown-profile"
-              ngbDropdownMenu
-              aria-labelledby="dropdownProfile"
-            >
-              <section class="profile-item">
-                <div class="float-left position-relative profile-img">
-                  <div>
-                    <img
-                      class="profile rounded-circle"
-                      src="../assets/avatar-1.jpg"
-                    />
-                    <span
-                      class="position-absolute online-sign rounded-circle border-white"
-                    ></span>
-                  </div>
-                </div>
-                <p class="information">
-                  <span class="text">Annette Black</span>
-                  <br />
-                  <span class="email">annette@geeksui.com</span>
-                </p>
-              </section>
-              <hr />
-              <section>
-                <p class="profile-item">
-                  <i class="far fa-circle"></i> Status
-                  <i class="pt-1 float-right fas fa-angle-right"></i>
-                </p>
-                <p class="profile-item"><i class="far fa-user"></i> Profile</p>
-                <p class="profile-item">
-                  <i class="far fa-star"></i> Subscription
-                </p>
-                <p class="profile-item"><i class="fas fa-cog"></i> Settings</p>
-              </section>
-              <hr />
-              <section>
-                <p class="profile-item">
-                  <i class="fas fa-power-off"></i> Sign Out
-                </p>
-              </section>
-            </div>
           </div>
         </li>
 
@@ -262,14 +133,14 @@
             [attr.aria-expanded]="!isCollapsed"
             class="bars p-2"
           >
-            <i class="me-bar" #bar1></i><i class="me-bar" #bar2></i
-            ><i class="me-bar" #bar3></i>
+            <i class="me-bar" #bar1></i>
+            <i class="me-bar" #bar2></i>
+            <i class="me-bar" #bar3></i>
           </div>
         </li>
       </ul>
     </div>
   </div>
-
 
   <div class="d-lg-none" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
     <ul class="d-block small-menu">
@@ -308,11 +179,14 @@
           <li>Career <i class="float-right fas fa-angle-right"></i></li>
           <li>Specialty <i class="float-right fas fa-angle-right"></i></li>
           <hr />
+          <li>About</li>
           <li>
-            About
+            Help Center
+            <span class="bg-success text-white rounded ml-2 px-2 font-size-90"
+              >New</span
+            >
+            <i class="float-right fas fa-angle-right"></i>
           </li>
-          <li>Help Center <span class="bg-success text-white rounded ml-2 px-2 font-size-90">New</span>
-            <i class="float-right fas fa-angle-right"></i></li>
           <li>Pricing</li>
           <li>Compare Plane</li>
           <li>Contact</li>
@@ -365,3 +239,137 @@
     </form>
   </div>
 </nav>
+
+<section class="container-fluid d-flex flex-row-reverse">
+  <div class="dropdown-profile" ngbDropdown #dropdownProfile="ngbDropdown">
+    <div class="py-2" ngbDropdownMenu aria-labelledby="dropdownManual">
+      <section class="profile-item">
+        <div class="float-left position-relative profile-img">
+          <div>
+            <img
+              class="profile mt-1 rounded-circle"
+              src="../assets/avatar-1.jpg"
+            />
+            <span
+              class="position-absolute online-sign rounded-circle border-white"
+            ></span>
+          </div>
+        </div>
+        <p class="information">
+          <span class="text">Annette Black</span>
+          <br />
+          <span class="email">annette@geeksui.com</span>
+        </p>
+      </section>
+      <hr />
+      <section>
+        <p class="profile-item">
+          <i class="far fa-circle"></i> Status
+          <i class="pt-1 float-right fas fa-angle-right"></i>
+        </p>
+        <p class="profile-item"><i class="far fa-user"></i> Profile</p>
+        <p class="profile-item"><i class="far fa-star"></i> Subscription</p>
+        <p class="profile-item"><i class="fas fa-cog"></i> Settings</p>
+      </section>
+      <hr />
+      <section>
+        <p class="profile-item"><i class="fas fa-power-off"></i> Sign Out</p>
+      </section>
+    </div>
+  </div>
+  <!---->
+  <div class="dropdown-notice" ngbDropdown #dropdownNotice="ngbDropdown">
+    <div ngbDropdownMenu aria-labelledby="dropdownManual">
+      <div class="header-notice">
+        <p class="float-left mb-0">Notifications</p>
+        <p class="float-right fas fa-cog"></p>
+      </div>
+      <div class="float-none"></div>
+      <br />
+      <br />
+      <hr class="mb-1" />
+      <div id="box-notices">
+        <div class="row first-row">
+          <div class="d-flex col-11">
+            <img src="../assets/avatar-1.jpg" />
+            <div class="ml-2">
+              <span class="font-weight-bold">Kristin Watson:</span>
+              <br /><span class="notic-text"
+                >Krisitn Watsan like your comment on course Javascript </span
+              ><br /><br />
+              <p>
+                <span class="far fa-thumbs-up text-success"></span
+                ><span class="notice-date"> 2 hours ago, 2:19 PM</span>
+              </p>
+            </div>
+          </div>
+          <div class="col-1 p-0 text-center">
+            <i class="notic-circle fas fa-circle txt-info"></i>
+            <i class="fas fa-times notic-circle text-dark"></i>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="d-flex col-11">
+            <img src="../assets/avatar-1.jpg" />
+            <div class="ml-2">
+              <span class="font-weight-bold">Kristin Watson:</span>
+              <br /><span class="notic-text"
+                >Krisitn Watsan like your comment on course Javascript </span
+              ><br /><br />
+              <p>
+                <span class="far fa-thumbs-up text-success"></span
+                ><span class="notice-date"> 2 hours ago, 2:19 PM</span>
+              </p>
+            </div>
+          </div>
+          <div class="col-1 p-0 text-center text-dark">
+            <i class="notic-circle fas fa-circle"></i>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="d-flex col-11">
+            <img src="../assets/avatar-1.jpg" />
+            <div class="ml-2">
+              <span class="font-weight-bold">Kristin Watson:</span>
+              <br /><span class="notic-text"
+                >Krisitn Watsan like your comment on course Javascript </span
+              ><br /><br />
+              <p>
+                <span class="far fa-thumbs-up txt-info"></span
+                ><span class="notice-date"> 2 hours ago, 2:19 PM</span>
+              </p>
+            </div>
+          </div>
+          <div class="col-1 p-0 text-center text-dark">
+            <i class="notic-circle fas fa-circle"></i>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="d-flex col-11">
+            <img src="../assets/avatar-1.jpg" />
+            <div class="ml-2">
+              <span class="font-weight-bold">Kristin Watson:</span>
+              <br /><span class="notic-text"
+                >Krisitn Watsan like your comment on course Javascript </span
+              ><br /><br />
+              <p>
+                <span class="fas fa-award text-warning"></span
+                ><span class="notice-date"> 2 hours ago, 2:19 PM</span>
+              </p>
+            </div>
+          </div>
+          <div class="col-1 p-0 text-center text-dark">
+            <i class="notic-circle fas fa-circle"></i>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-notice">
+        <p class="font-weight-bold">See all Notifications</p>
+      </div>
+    </div>
+  </div>
+</section>
