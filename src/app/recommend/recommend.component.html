@@ -1,7 +1,6 @@
 <div class="my-5 py-5"></div>
 <article class="container">
-    
-<h3 class="ml-0 mb-2">Recommended to you</h3>
+  <h3 class="ml-0 mb-2">Recommended to you</h3>
   <section class="row position-relative">
     <swiper
       class="p-3"
@@ -25,18 +24,21 @@
         disableOnInteraction: false
       }"
     >
-      <ng-template swiperSlide><app-cards></app-cards></ng-template>
-      <ng-template swiperSlide><app-cards></app-cards></ng-template>
-      <ng-template swiperSlide><app-cards></app-cards></ng-template>
-      <ng-template swiperSlide><app-cards></app-cards></ng-template>
-      <ng-template swiperSlide><app-cards></app-cards></ng-template>
-      <ng-template swiperSlide><app-cards></app-cards></ng-template>
+      <ng-template swiperSlide *ngFor="let card of cards"><app-cards [img]='card.img' [title]='card.title'></app-cards></ng-template>
     </swiper>
-    <span class="d-none d-md-inline custom-button-prev position-absolute fas fa-chevron-left rounded-circle"></span>
-    <span class="d-none d-md-inline custom-button-next position-absolute fas fa-chevron-right rounded-circle"></span>
+    <span
+      class="d-none d-md-inline custom-button-prev position-absolute fas fa-chevron-left rounded-circle"
+    ></span>
+    <span
+      class="d-none d-md-inline custom-button-next position-absolute fas fa-chevron-right rounded-circle"
+    ></span>
     <div class="d-inline-flex mt-3 d-md-none justify-content-center w-100">
-        <span class="mt-3 m-1 custom-button-prev fas fa-chevron-left rounded-circle"></span>
-        <span class="mt-3 m-1 custom-button-next fas fa-chevron-right rounded-circle"></span>
+      <span
+        class="mt-3 m-1 custom-button-prev fas fa-chevron-left rounded-circle"
+      ></span>
+      <span
+        class="mt-3 m-1 custom-button-next fas fa-chevron-right rounded-circle"
+      ></span>
     </div>
   </section>
 </article>

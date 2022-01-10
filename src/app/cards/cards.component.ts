@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cards',
@@ -9,7 +9,8 @@ export class CardsComponent implements OnInit {
   constructor() {}
   tst:any='sss';
   ngOnInit(): void {}
-
+  @Input() img='';
+  @Input()  title='';
   
   bookmark(product: any) {
     if (product.children[1].classList.contains('d-none')) {
