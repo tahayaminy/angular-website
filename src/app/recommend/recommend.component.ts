@@ -33,11 +33,4 @@ export class RecommendComponent implements OnInit {
     pagination: { clickable: true },
     scrollbar: { draggable: true },
   };
-  
-  onSwiper(swiper:any) {
-    console.log(swiper);
-  }
-  onSlideChange() {
-    console.log('slide change');
-  }
 }
