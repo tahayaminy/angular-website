@@ -154,12 +154,13 @@ nav{
       font-size: 20px;
       cursor: pointer;
       background-color: #f5f4f8;
+      border-radius: 50%;
     }
     .notice-sign {
       width: 11px;
       height: 11px;
       background-color: #754ffe;
-      border: 0.1em solid white;
+      border: 0.13em solid white;
       position: absolute;
       right: 0;
       top: 0;
@@ -190,7 +191,7 @@ nav{
       width: 11px;
       height: 11px;
       background-color: #19cb98;
-      border: 0.1em solid white;
+      border: 0.13em solid white;
       position: absolute;
       right: 0;
       bottom: 0;
