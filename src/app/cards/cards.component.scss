@@ -8,7 +8,18 @@ $darkwarn: #c28135;
 $cardtxt: #00000096;
 $receptions: #00000038;
  
+.fa-star{
+  font-size: 70%;
+  margin: 0 1px;
+}
   .card {
+    border-radius: .5em;
+    .card-img-top{
+      border-radius: .5em .5em 0 0;
+    }
+    .card-title{
+      font-size: 1.3em;
+    }
     p {
       color: $cardtxt;
       font-weight: 500;
@@ -52,6 +63,7 @@ $receptions: #00000038;
       background-color: white;
       color: $cardtxt;
       font-weight: 500;
+      border-radius: 0 0 .5em .5em;
       i {
         color: $cardtxt;
       }
