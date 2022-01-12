@@ -19,6 +19,11 @@
     scrollbar-width: none; /* Firefox */
   }
 }
+// @font-face {
+//   font-family: inter;
+//   src: url('./inter.ttf');
+// }
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 $purple: #754ffe;
 $secondary: #a8a3b9;
@@ -36,6 +41,6 @@ $darkwarn: #c28135;
   text-decoration: none;
 }
 body{
-  font-family: sans-serif;
+  font-family: Inter;
   font-size: 14px;
 }
