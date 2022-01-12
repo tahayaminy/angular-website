@@ -29,6 +29,7 @@ nav{
       position: relative;
       cursor: pointer;
       transition: 0.2s;
+      font-weight: 500;
       span {
         color: $black;
       }
@@ -46,14 +47,19 @@ nav{
         min-width: 250px;
         box-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 0.1),
           -1px -1px 5px rgba($color: #000000, $alpha: 0.1);
-        padding: 0.5em 1em;
+        padding: 1em 0em;
         & > span {
-          padding: 0.5em;
-          color: rgba($color: #000000, $alpha: 0.5);
+          padding: .9em 1.4em 1.1em 1.4em;
+          color: #a8a3b9;
           cursor: default;
+          font-size: 11px;
+          font-family: Inter;
+          font-weight: 100;
+          letter-spacing: 1px;
+          opacity: .7;
         }
         li {
-          padding: 0.5em;
+          padding: 0.5em 1em;
           transition: 0.2s;
           .fa-file-alt,
           .fa-layer-group {
@@ -84,7 +90,7 @@ nav{
           top: 99%;
           & > li {
             &:hover {
-              background-color: $primary;
+              background-color: rgba($color: $primary, $alpha: .6);
               color: $purple;
             }
           }

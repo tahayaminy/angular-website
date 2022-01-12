@@ -1,17 +1,19 @@
 <nav class="container-fluid border-bottom">
   <div class="d-flex align-items-baseline position-relative">
-    <img class="logo align-self-center" src="../assets/logo.svg" />
+    <img class="logo align-self-center pb-1" src="../assets/logo.svg" />
     <div class="d-none d-lg-flex align-items-center">
       <ul class="d-inline large-menu">
         <li>
-          Browse <span class="fas fa-angle-down ml-2"></span>
+          Browse <span class="fas fa-angle-down ml-1"></span>
           <ul>
             <li *ngFor="let mockItem of mockItems">
-              {{ mockItem.name }}
-              <i
-                *ngIf="mockItem.hasSubMenu"
-                class="float-right fas fa-angle-right"
-              ></i>
+              <div class="d-inline-flex align-items-center justify-content-between w-100">
+                {{ mockItem.name }}
+                <i
+                  *ngIf="mockItem.hasSubMenu"
+                  class="fas fa-angle-right"
+                ></i>
+              </div>
             </li>
           </ul>
         </li>
@@ -28,19 +30,19 @@
         <li>
           Pages <span class="fas fa-angle-down ml-2"></span>
           <ul>
-            <li>Courses <i class="float-right fas fa-angle-right"></i></li>
-            <li>Path <i class="float-right fas fa-angle-right"></i></li>
-            <li>Blog <i class="float-right fas fa-angle-right"></i></li>
-            <li>Career <i class="float-right fas fa-angle-right"></i></li>
-            <li>Specialty <i class="float-right fas fa-angle-right"></i></li>
+            <li><div class="d-inline-flex align-items-center justify-content-between w-100">Courses <i class="fas fa-angle-right"></i></div></li>
+            <li><div class="d-inline-flex align-items-center justify-content-between w-100">Path <i class="fas fa-angle-right"></i></div></li>
+            <li><div class="d-inline-flex align-items-center justify-content-between w-100">Blog <i class="fas fa-angle-right"></i></div></li>
+            <li><div class="d-inline-flex align-items-center justify-content-between w-100">Career <i class="fas fa-angle-right"></i></div></li>
+            <li><div class="d-inline-flex align-items-center justify-content-between w-100">Specialty <i class="fas fa-angle-right"></i></div></li>
             <hr />
             <li>About</li>
-            <li>
-              Help Center
+            <li><div class="d-inline-flex align-items-center  w-100">Help Center
               <span class="bg-success text-white rounded ml-2 px-2 font-size-90"
                 >New</span
               >
-              <i class="float-right fas fa-angle-right"></i>
+              <i class="ml-auto fas fa-angle-right"></i></div>
+              
             </li>
             <li>Pricing</li>
             <li>Compare Plane</li>
@@ -51,9 +53,9 @@
           Accounts <span class="fas fa-angle-down ml-2"></span>
           <ul>
             <span class="font-weight-bold">ACCOUNTS</span>
-            <li>Instructor <i class="float-right fas fa-angle-right"></i></li>
-            <li>Students <i class="float-right fas fa-angle-right"></i></li>
-            <li>Admin <i class="float-right fas fa-angle-right"></i></li>
+            <li><div class="d-inline-flex align-items-center justify-content-between w-100">Instructor <i class="fas fa-angle-right"></i></div></li>
+            <li><div class="d-inline-flex align-items-center justify-content-between w-100">Students <i class="fas fa-angle-right"></i></div></li>
+            <li><div class="d-inline-flex align-items-center justify-content-between w-100">Admin <i class="fas fa-angle-right"></i></div></li>
             <hr />
             <li>Sign In</li>
             <li>Sing Up</li>
@@ -145,7 +147,7 @@
   <div class="d-lg-none" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
     <ul class="d-block small-menu">
       <li (click)="openSubMenu(id1)">
-        Browse <span class="float-right fas fa-angle-down"></span>
+        <div class="d-inline-flex align-items-center justify-content-between w-100">Browse <span class="fas fa-angle-down"></span></div>
         <ul #id1>
           <li>
             Web Development <i class="float-right fas fa-angle-right"></i>
@@ -161,7 +163,7 @@
         </ul>
       </li>
       <li (click)="openSubMenu(id2)">
-        Landings <span class="fas float-right fa-angle-down"></span>
+        <div class="d-inline-flex align-items-center justify-content-between w-100">Landings <span class="fas fa-angle-down"></span></div>
         <ul #id2>
           <span class="font-weight-bold">LANDINGS</span>
           <li>Courses</li>
@@ -171,7 +173,7 @@
         </ul>
       </li>
       <li (click)="openSubMenu(id3)">
-        Pages <span class="fas float-right fa-angle-down"></span>
+        <div class="d-inline-flex align-items-center justify-content-between w-100">Pages <span class="fas fa-angle-down"></span></div>
         <ul #id3>
           <li>Courses <i class="float-right fas fa-angle-right"></i></li>
           <li>Path <i class="float-right fas fa-angle-right"></i></li>
@@ -193,7 +195,7 @@
         </ul>
       </li>
       <li (click)="openSubMenu(id4)">
-        Accounts <span class="fas float-right fa-angle-down"></span>
+        <div class="d-inline-flex align-items-center justify-content-between w-100">Accounts <span class="fas float-right fa-angle-down"></span></div>
         <ul #id4>
           <span class="font-weight-bold">ACCOUNTS</span>
           <li>Instructor <i class="float-right fas fa-angle-right"></i></li>
@@ -334,7 +336,8 @@
             <div class="ml-2">
               <span class="font-weight-bold">Jenny Wilson:</span>
               <br /><span class="notic-text"
-                >Krisitn Watsan like your comment on course Javascript Introduction!</span
+                >Krisitn Watsan like your comment on course Javascript
+                Introduction!</span
               ><br /><br />
               <p>
                 <span class="far fa-thumbs-up txt-info"></span
@@ -353,7 +356,8 @@
             <div class="ml-2">
               <span class="font-weight-bold">Sina Ray:</span>
               <br /><span class="notic-text"
-                >You earn new certificate for complete the Javascript Beginner course.</span
+                >You earn new certificate for complete the Javascript Beginner
+                course.</span
               ><br /><br />
               <p>
                 <span class="fas fa-award text-warning"></span
