@@ -57,25 +57,28 @@ header {
 }
 .intro {
     background-color: white;
-    @media only screen and (min-width:992px){
-        justify-content: center;
-    }
-    box-shadow: 0 1px 5px rgba($color: #000000, $alpha: .2);
+    // @media only screen and (min-width:992px){
+    //     justify-content: center;
+    // }
+    box-shadow: 0 1px 5px rgba($color: #000000, $alpha: .09);
     &>div>div> div {
         & > div {
           background-color: rgba($color: $warning, $alpha: 0.3);
           width: 3rem;height:3rem;
           i {
             color: $darkwarn;
+            font-size: 16px;
           }
         }
         p {
-          font-size: 110%;
-          b {
-            font-size: 105%;
+          font-size: 16px;
+          .title{
+            color:$black;
+            font-weight: 600;
           }
-          span {
+          .detail {
             color: $secondary;
+            font-size: 14px;
           }
         }
       }
