@@ -241,7 +241,7 @@
     </form>
   </div>
 </nav>
-
+<!---->
 <section class="container-fluid d-flex flex-row-reverse">
   <div class="dropdown-profile" ngbDropdown #dropdownProfile="ngbDropdown">
     <div class="py-2" ngbDropdownMenu aria-labelledby="dropdownManual">
@@ -282,23 +282,19 @@
   <!---->
   <div class="dropdown-notice" ngbDropdown #dropdownNotice="ngbDropdown">
     <div ngbDropdownMenu aria-labelledby="dropdownManual">
-      <div class="header-notice">
-        <p class="float-left mb-0">Notifications</p>
-        <p class="float-right fas fa-cog"></p>
+      <div class="header-notice d-flex align-items-center my-3 px-3">
+        <p class="mr-auto">Notifications</p>
+        <p class="fas fa-cog"></p>
       </div>
-      <div class="float-none"></div>
-      <br />
-      <br />
-      <hr class="mb-1" />
+      <hr/>
       <div id="box-notices">
-        <div class="row first-row">
+        <div class="row first-row px-4">
           <div class="d-flex col-11">
             <img src="../assets/avatar-1.jpg" />
-            <div class="ml-2">
-              <span class="font-weight-bold">Kristin Watson:</span>
-              <br /><span class="notic-text"
-                >Krisitn Watsan like your comment on course Javascript </span
-              ><br /><br />
+            <div class="ml-3">
+              <span class="font-weight-bold d-block notice-title mb-1">Kristin Watson:</span>
+              <span class="notic-text"
+                >Krisitn Watsan like your comment on course Javascript Introduction!</span><br /><br />
               <p>
                 <span class="far fa-thumbs-up text-success"></span
                 ><span class="notice-date"> 2 hours ago, 2:19 PM</span>
@@ -307,11 +303,11 @@
           </div>
           <div class="col-1 p-0 text-center">
             <i class="notic-circle fas fa-circle txt-info"></i>
-            <i class="fas fa-times notic-circle text-dark"></i>
+            <i class="bi bi-x notic-circle text-dark"></i>
           </div>
         </div>
         <hr />
-        <div class="row">
+        <div class="row px-4">
           <div class="d-flex col-11">
             <img src="../assets/avatar-2.jpg" />
             <div class="ml-2">
@@ -330,7 +326,7 @@
           </div>
         </div>
         <hr />
-        <div class="row">
+        <div class="row px-4">
           <div class="d-flex col-11">
             <img src="../assets/avatar-3.jpg" />
             <div class="ml-2">
@@ -350,7 +346,7 @@
           </div>
         </div>
         <hr />
-        <div class="row">
+        <div class="row px-4">
           <div class="d-flex col-11">
             <img src="../assets/avatar-4.jpg" />
             <div class="ml-2">
