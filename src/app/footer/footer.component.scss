@@ -1,8 +1,9 @@
 @import '../../assets/ex';
 footer{
-    font-size: 110%;
+    font-size: 100%;
     .links{
         transition: .2s;
+        color: #5c5776;
         &:hover{
             cursor: pointer;
             color: $purple;
@@ -10,7 +11,13 @@ footer{
     }
     @media only screen and(max-width:768px){
         .copyright{
-            margin-bottom: 1em;
+            margin-bottom: .5em;
         }
+    }
+    
+}
+@media only screen and (max-width:375px){ 
+    .support{
+        margin-top: 1em;
     }
 }
