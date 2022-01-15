@@ -1,6 +1,9 @@
 @import '../../assets/ex';
 footer{
     font-size: 100%;
+    &>section>div{
+        color: #5c5776 !important;
+    }
     .links{
         transition: .2s;
         color: #5c5776;

@@ -14,6 +14,18 @@ $receptions: #00000038;
 }
   .card {
     min-height: 410px;
+    @media only screen and (max-width:320px){
+      min-height: 420px;
+    }
+    @media only screen and (min-width:320px) and (max-width:425px){
+      min-height: 430px;
+    }
+    @media only screen and (min-width:425px) and (max-width:500px){
+      min-height: 505px;
+    }
+    @media only screen and (min-width:500px) and (max-width:768px){
+      min-height: 535px;
+    }
     border-radius: .5em;
     .card-img-top{
       border-radius: .5em .5em 0 0;
@@ -48,7 +60,8 @@ $receptions: #00000038;
         display: block;
         margin: 10px 0;
         &>.people{
-            color: $receptions;
+            color: #a8a3b9;
+            font-size: 12px;
         }
         .del{
             text-decoration: line-through;
