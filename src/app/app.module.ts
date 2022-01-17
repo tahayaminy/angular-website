@@ -6,9 +6,6 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { CardsComponent } from './cards/cards.component';
-import { SwiperModule } from 'swiper/angular';
-import { RecommendComponent } from './recommend/recommend.component';
 
 import { IndexModule } from './index/index.module';
 
@@ -16,15 +13,12 @@ import { IndexModule } from './index/index.module';
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent,
-    CardsComponent,
-    RecommendComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    SwiperModule,
     IndexModule
   ],
   providers: [],

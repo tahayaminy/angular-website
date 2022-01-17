@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { IndexRoutingModule } from './index-routing.module';
 import { IndexComponent } from './index.component';
 import { HeaderComponent } from './header/header.component';
+import { PostsModule } from '../posts/posts.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     CommonModule,
-    IndexRoutingModule
+    IndexRoutingModule,
+    PostsModule
   ]
 })
 export class IndexModule { }
