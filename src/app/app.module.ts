@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CardsComponent } from './cards/cards.component';
 import { SwiperModule } from 'swiper/angular';
 import { RecommendComponent } from './recommend/recommend.component';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RecommendComponent } from './recommend/recommend.component';
     HeaderComponent,
     FooterComponent,
     CardsComponent,
-    RecommendComponent
+    RecommendComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
