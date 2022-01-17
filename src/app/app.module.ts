@@ -5,17 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardsComponent } from './cards/cards.component';
 import { SwiperModule } from 'swiper/angular';
 import { RecommendComponent } from './recommend/recommend.component';
+import { IndexModule } from './index/index.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HeaderComponent,
     FooterComponent,
     CardsComponent,
     RecommendComponent
@@ -24,7 +23,8 @@ import { RecommendComponent } from './recommend/recommend.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    SwiperModule
+    SwiperModule,
+    IndexModule
   ],
   providers: [],
   bootstrap: [AppComponent]
