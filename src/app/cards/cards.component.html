@@ -1,15 +1,25 @@
 <div>
   <div class="card">
-    <img src="{{img}}" class="card-img-top" alt="..." />
+    <img src="{{card.img}}" class="card-img-top" alt="..." />
     <div class="card-body pb-1">
-      <h5 class="card-title">{{title}}</h5>
+      <h5 class="card-title">{{card.title}}</h5>
       <p class="card-text">
-        <i class="far fa-clock"></i> 3h 56m
+        <i class="far fa-clock"></i> {{card.time}}
         <span class="ml-3 receptions"
           ><i class="bi bi-reception-4 holder"></i
-          ><i class="bi bi-reception-2 value"></i
+          ><i [ngClass]="{'bi-reception-2': card.level === 1, 'bi-reception-3': card.level===2,'bi-reception-4':card.level===3}" class="bi value"></i
         ></span>
-        <span class="ml-4">Beginner</span>
+        <span class="ml-4">
+          <ng-template [ngIf]="card.level==1">
+            Beginner
+          </ng-template>
+          <ng-template [ngIf]="card.level==2">
+            Intermediate
+          </ng-template>
+          <ng-template [ngIf]="card.level==3">
+            Advance
+          </ng-template>
+        </span>
         <span class="span-block">
           <i class="fas fa-star text-warning"></i
           ><i class="fas fa-star text-warning"></i
@@ -17,7 +27,7 @@
           ><i class="fas fa-star text-warning"></i
           ><i class="fas fa-star text-warning"></i
           ><span class="votes text-warning ml-2">4.5 </span
-          ><span class="people"> (13,245)</span>
+          ><span class="people"> {{card.people}}</span>
         </span>
         <span class="span-block">
           <span class="font-weight-bold">$600</span
@@ -26,18 +36,17 @@
       </p>
     </div>
     <div class="card-footer">
-      <img class="img-fluid" src="../../assets/avatar-1.jpg" />
-      Morris Mccoy
+      <img class="img-fluid" src="{{card.teacherImg}}" />
+      {{card.teacherName}}
       <span
-        (click)="bookmark(b1)"
-        #b1
+        (click)="bookmark=true"
         class="float-right mr-2"
         placement="top"
         ngbTooltip="Add to Bookmarks"
         tooltipClass="custom-tooltip"
       >
-        <i class="far fa-bookmark"></i>
-        <i class="d-none fas fa-bookmark"></i>
+        <i *ngIf="!bookmark" class="far fa-bookmark"></i>
+        <i *ngIf="bookmark" class="fas fa-bookmark"></i>
       </span>
     </div>
   </div>
