@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardsComponent } from './cards/cards.component';
 import { SwiperModule } from 'swiper/angular';
@@ -16,7 +15,6 @@ import { IndexComponent } from './index/index.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    HeaderComponent,
     FooterComponent,
     CardsComponent,
     RecommendComponent,
