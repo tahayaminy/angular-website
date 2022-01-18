@@ -1,0 +1,30 @@
+@import "../../../assets/ex";
+
+header{
+    background-color: $purple;
+    p{
+        font-weight: 400;
+    }
+    h1{
+        font-weight: 600;
+    }
+    h1,p{
+        letter-spacing: -.02rem;
+    }
+    .fa-star{
+        font-size: 9px;
+    }
+    .text-warning{
+        color: #ffc107 !important;
+        opacity: .9;
+        margin: 0 2px;
+    }
+}
+
+@media only screen and (max-width:371px){
+    .header_detail{
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+}

@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 import { IndexModule } from './index/index.module';
+import { CourseModule } from './course/course.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { IndexModule } from './index/index.module';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    IndexModule
+    IndexModule,
+    CourseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,35 @@
+@import "../../../assets/ex";
+.rounded {
+  border-radius: 0.5em !important;
+}
+.nav{
+    overflow-x: scroll;
+    @include hideScroll('&');
+    overflow-y:hidden;
+    flex-wrap: nowrap;
+}
+.nav-item {
+  a {
+    color: #79758f;
+  }
+  border-bottom: 2px solid transparent;
+  &:hover {
+    transition: border-color 0.15s ease-in-out,
+      border-width 0.2s ease-in-out 0.15s, color 0.15s ease-in-out;
+    border-color: $purple;
+    border-width: 1px;
+    a {
+      color: $purple;
+    }
+  }
+}
+.mtn {
+  margin-top: -3.5rem;
+}
+.active {
+  border-color: $purple;
+  border-width: 1px;
+  a {
+    color: $purple;
+  }
+}
