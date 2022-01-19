@@ -12,9 +12,6 @@ import { PostsModule } from '../posts/posts.module';
     IndexComponent,
     HeaderComponent,
   ],
-  exports: [
-    IndexComponent
-  ],
   imports: [
     CommonModule,
     IndexRoutingModule,
