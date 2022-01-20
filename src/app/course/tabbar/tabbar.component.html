@@ -3,89 +3,30 @@
     <div class="row mtn px-3">
       <div class="col-lg-8 col-12 bg-white rounded">
         <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav border-bottom px-1">
-          <li [ngbNavItem]="1" [class.active]="active ==1" class="nav-item mx-3 active">
+          <li [ngbNavItem]="1" [class.active]="active ==1" class="nav-item mx-4 active">
             <a ngbNavLink class="nav-link py-3" href="#">Contents</a>
             <ng-template ngbNavContent>
-                <div class="collapse__title d-flex align-items-center my-3" (click)="handleToggle(isCollapsed1)" [attr.aria-expanded]="!isCollapsed1" aria-controls="collapseExample">
-                  <span>JavaScript Beginning</span><span class="fas fa-chevron-down ml-auto"></span>
-                </div>
-              <section class="collapse--hover">
-                <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed1">
-                  <p class="mb-2 d-flex align-items-center">
-                    <i class="fas fa-play mr-2"></i>
-                    <span>Introduction</span>
-                    <span class="ml-auto">1m 41s</span>
-                  </p>
-                  <p class="mb-2 d-flex align-items-center">
-                    <i class="fas fa-play mr-2"></i>
-                    <span>Introduction</span>
-                    <span class="ml-auto">1m 41s</span>
-                  </p>
-                  <p class="d-flex align-items-center">
-                    <i class="fas fa-play mr-2"></i>
-                    <span>Introduction</span>
-                    <span class="ml-auto">1m 41s</span>
-                  </p>
-                </div>
-                {{isCollapsed1}}
-                <div class="border-bottom"></div>
-              </section>
-              
-              <div class="collapse__title d-flex align-items-center my-3" (click)="collapse2.toggle()" [attr.aria-expanded]="!isCollapsed2" aria-controls="collapseExample">
-                <span>JavaScript Beginning</span><span  [ngStyle]="{'transform': (isCollapsed2 == true)?'rotate(0deg)' : 'rotate(180deg)'}" class="fas fa-chevron-down ml-auto"></span>
-              </div>
-            <section class="collapse--hover">
-              <div #collapse2="ngbCollapse" [(ngbCollapse)]="isCollapsed2">
-                <p class="mb-2 d-flex align-items-center">
-                  <i class="fas fa-play mr-2"></i>
-                  <span>Introduction</span>
-                  <span class="ml-auto">1m 41s</span>
-                </p>
-                <p class="mb-2 d-flex align-items-center">
-                  <i class="fas fa-play mr-2"></i>
-                  <span>Introduction</span>
-                  <span class="ml-auto">1m 41s</span>
-                </p>
-                <p class="mb-3 d-flex align-items-center">
-                  <i class="fas fa-play mr-2"></i>
-                  <span>Introduction</span>
-                  <span class="ml-auto">1m 41s</span>
-                </p>
-              </div>
-              {{isCollapsed2}}
-              <div class="border-bottom"></div>
-            </section>
-
-             <div class="collapse__title d-flex align-items-center my-3" (click)="collapse3.toggle()" [attr.aria-expanded]="!isCollapsed3" aria-controls="collapseExample">
-                  <span>JavaScript Beginning</span><span class="fas fa-chevron-down ml-auto"></span>
-                </div>
-              <section class="collapse--hover">
-                <div #collapse3="ngbCollapse" [(ngbCollapse)]="isCollapsed3">
-                  <p class="mb-2 d-flex align-items-center">
-                    <i class="fas fa-play mr-2"></i>
-                    <span>Introduction</span>
-                    <span class="ml-auto">1m 41s</span>
-                  </p>
-                  <p class="mb-2 d-flex align-items-center">
-                    <i class="fas fa-play mr-2"></i>
-                    <span>Introduction</span>
-                    <span class="ml-auto">1m 41s</span>
-                  </p>
-                  <p class="mb-3 d-flex align-items-center">
-                    <i class="fas fa-play mr-2"></i>
-                    <span>Introduction</span>
-                    <span class="ml-auto">1m 41s</span>
-                  </p>
-                </div>
-                {{isCollapsed3}}
-                <div class="border-bottom"></div>
-              </section>
+                <section *ngFor="let season of mockSeasons;let i=index">
+                  <div [class.c-pt]="i!=0" class="c-pb collapse__title d-flex align-items-center" (click)="handleToggle(i)" [attr.aria-expanded]="!collapse[i]" aria-controls="collapseExample">
+                    <span>{{season.season}}</span><span [ngStyle]="{'transform':(collapse[i])? 'rotate(0deg)':'rotate(180deg)'}" class="fas fa-chevron-down ml-auto"></span>
+                  </div>
+                  <section class="collapse--hover">
+                    <div class="pb-2" [(ngbCollapse)]='collapse[i]'>
+                      <p class="mb-2 d-flex align-items-center" *ngFor="let lesson of season.lessons">
+                        <i class="fas fa-play mr-2"></i>
+                        <span class="pl-1">{{lesson.name}}</span>
+                        <span class="ml-auto">{{lesson.time}}</span>
+                      </p>
+                    </div>
+                    <div [class.pt-1]="collapse[i]==false" class="border-bottom"></div>
+                  </section>
+                </section>
             </ng-template>
           </li>
-          <li [ngbNavItem]="2" [class.active]="active ==2" class="nav-item mx-3">
+          <li [ngbNavItem]="2" [class.active]="active ==2" class="nav-item mx-4">
             <a ngbNavLink class="nav-link  py-3" href="#">Description</a>
             <ng-template ngbNavContent>
-              <div class="nav__description py-3">
+              <div class="nav__description">
                 <h3 class="mb-2">Course Descriptions</h3>
                 <p class="text-color">If you’re learning to program for the first time, or if you’re coming from a different language, this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript. First, you'll discover the types of applications that can be built with JavaScript, and the platforms they’ll run on.</p>
                 <br>
@@ -124,12 +65,12 @@
               </div>  
             </ng-template>
           </li>
-          <li [ngbNavItem]="3" [class.active]="active ==3" class="nav-item mx-3">
+          <li [ngbNavItem]="3" [class.active]="active ==3" class="nav-item mx-4">
             <a ngbNavLink class="nav-link  py-3" href="#">Reviews</a>
             <ng-template ngbNavContent>third content</ng-template>
           </li>
         </ul>
-        <div [ngbNavOutlet]="nav" class="pt-1 pb-4 px-4"></div>
+        <div [ngbNavOutlet]="nav" class="py-4 px-4"></div>
       </div>
     </div>
   </div>
