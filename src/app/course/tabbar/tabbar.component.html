@@ -1,7 +1,7 @@
 <section class="pb-5">
   <div class="container mx-auto pb-5 mb-4 ">
     <div class="row mtn px-3">
-      <div class="col-lg-8 col-12 bg-white rounded">
+      <div style="height: 100%;" class="col-lg-8 col-12 bg-white rounded">
         <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav border-bottom px-1">
           <li [ngbNavItem]="1" [class.active]="active ==1" class="nav-item mx-4 active">
             <a ngbNavLink class="nav-link py-3" href="#">Contents</a>
@@ -180,6 +180,91 @@
         </ul>
         <div [ngbNavOutlet]="nav" class="p-4"></div>
       </div>
-    </div>
+<!----------->
+<div class="col-lg-4 pl-lg-4 col-md-12 col-12 mn">
+  <!-- Card -->
+  <div class="card mb-3 mb-4">
+      <div class="p-1">
+          <div class="youtube d-flex justify-content-center rounded border-white border" >
+              <span class="d-flex  justify-content-center rounded-circle p-3"><i class="bi bi-play"></i></span>
+          </div>
+      </div>
+      <!-- Card body -->
+      <div class="card-body price-box p-4">
+          <!-- Price single page -->
+          <div class="mb-3">
+              <span class="price">$600 </span>
+              <del style="font-size: 16px;" class="del text-muted"> $750</del>
+          </div>
+          <div class="d-grid">
+            <button class="w-100 mb-2 start">Start Free Month</button>
+            <button class="w-100 getfull">Get Full Access</button>
+          </div>
+      </div>
   </div>
+
+  <!-- Card -->
+  <div class="card mb-4">
+      <div class="whatsInclude">
+          <!-- Card header -->
+          <div class="card-header bg-white rounded">
+              <h4 class="mb-0">What’s included</h4>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item bg-transparent"><i class="bi bi-play-circle align-middle mr-2 text-primary"></i>12 hours video</li>
+              <li class="list-group-item bg-transparent"><i class="bi bi-award mr-2 align-middle text-success"></i>Certificate</li>
+              <li class="list-group-item bg-transparent"><i class="bi bi-calendar align-middle mr-2 text-info"></i>12 Article
+              </li>
+              <li class="list-group-item bg-transparent"><i class="bi bi-camera-video align-middle mr-2 text-secondary"></i>Watch Offline</li>
+              <li class="list-group-item bg-transparent border-bottom-0"><i class="bi bi-clock align-middle mr-2 text-warning"></i>Lifetime access</li>
+          </ul>
+      </div>
+  </div>
+
+
+  <!-- Card -->
+  <div class="card">
+      <!-- Card body -->
+      <div class="card-body p-4">
+          <div class="d-flex align-items-center">
+              <div class="position-relative">
+                  <img src="../../../assets/avatar-1.jpg" width="80px" height="80px" alt="" class="rounded-circle avatar-xl">
+                  <a href="#" class="position-absolute mt-2 ml-n3" data-bs-toggle="tooltip" data-placement="top" title="" data-bs-original-title="Verifed">
+                      <img src="../assets/checked-mark.svg" alt="" height="30" width="30">
+                  </a>
+              </div>
+              <div class="ml-4">
+                  <h4 class="mb-1">Jenny Wilson</h4>
+                  <p class="mb-1 develop">Front-end Developer, Designer</p>
+                  <span class="develop"><span class="text-warning">4.5</span><span class="fas fa-star text-warning mr-2"></span>Instructor Rating</span>
+              </div>
+          </div>
+
+          <div class="border-top row mt-3 border-bottom mb-3 g-0">
+              <div class="col">
+                  <div class="pr-1 pl-2 py-3">
+                      <h5 class="mb-1">11,604</h5>
+                      <span style="color: #5c5776;">Students</span>
+                  </div>
+              </div>
+              <div class="col border-left">
+                  <div class="pr-2 pl-3 py-3">
+                      <h5 class="mb-1">32</h5>
+                      <span style="color: #5c5776;">Courses</span>
+                  </div>
+              </div>
+              <div class="col border-left">
+                  <div class="pr-1 pl-3 py-3">
+                      <h5 class="mb-1">12,230</h5>
+                      <span style="color: #5c5776;">Reviews</span>
+                  </div>
+              </div>
+          </div>
+          <p style="margin-bottom: 1rem;">I am an Innovation designer focussing on UX/UI based in Berlin. As a creative resident at Figma explored the city of the future and how new technologies.</p>
+          <button class="viewDetails">View Details</button>
+      </div>
+  </div>
+</div>
+</div>
+</div>
 </section>

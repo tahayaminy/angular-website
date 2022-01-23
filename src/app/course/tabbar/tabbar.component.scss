@@ -1,32 +1,150 @@
 @import "../../../assets/ex";
+
+.text-muted {
+  color: #a8a3b9 !important;
+  font-size: 0.75rem;
+}
+.del {
+  text-decoration: line-through;
+}
 .rounded {
   border-radius: 0.5em !important;
 }
-.nav__description{
-  h3{
-    font-size: 20px;
+.card-body {
+  h4 {
+    font-size: 1rem;
   }
-  h4{
-    font-size: 16px;
+  h5 {
+    font-size: 0.875rem;
   }
-  p{
+  .develop {
+    font-size: 0.75rem;
+    color: #5c5776;
+    .text-warning {
+      color: #ffaa46 !important;
+    }
+    .fas {
+      font-size: 9px !important;
+      padding-left: 1px;
+    }
+  }
+}
+.mn{margin-top: 1.5rem;}
+@media only screen and (min-width:992px){
+  .mn{margin-top: -8.8rem;}
+}
+.viewDetails {
+  border: 1px solid rgba($color: $secondary, $alpha: 0.25);
+  font-size: 12.25px;
+  padding: 8px 14px;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s;
+  background-color: #fff;
+  color: #5c5776;
+  &:hover {
+    background-color: #f5f4f8;
+    border-color: #beb9cd;
     color: #5c5776;
   }
 }
-.nav-link{
+.youtube {
+  background-image: url("../../../assets/course-javascript.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 74px 0;
+  & > span {
+    width: 56px;
+    height: 56px;
+    background-color: #fff;
+    transition: 0.2s;
+    cursor: pointer;
+    i {
+      font-size: 18px;
+      color: $purple;
+    }
+    &:hover {
+      background-color: $purple;
+      i {
+        color: #fff;
+      }
+    }
+  }
+}
+.card {
+  border-radius: 0.6rem;
+}
+.price-box {
+  .price {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .start {
+    background-color: $purple;
+    color: #fff;
+    border-radius: 0.25em;
+    border-color: $purple;
+    border-style: solid;
+    font-weight: 600;
+    padding: 12px 20px;
+    outline: none;
+    transition: 0.2s;
+    &:hover {
+      background-color: #6343d8;
+      border-color: #5e3fcb;
+    }
+  }
+  .getfull {
+    background-color: #fff;
+    color: $purple;
+    border-radius: 0.25em;
+    border-color: $purple;
+    border-style: solid;
+    font-weight: 600;
+    padding: 12px 20px;
+    outline: none;
+    transition: 0.2s;
+    &:hover {
+      background-color: $purple;
+      color: #fff;
+    }
+  }
+}
+.whatsInclude {
+  h4 {
+    font-size: 16px;
+    padding: 16px 24px;
+  }
+  .list-group-item {
+    padding: 12px 20px;
+  }
+}
+.nav__description {
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  p {
+    color: #5c5776;
+  }
+}
+.nav-link {
   font-weight: 500;
 }
-.c-pb{
+.c-pb {
   padding-bottom: 12px;
 }
-.c-pt{
+.c-pt {
   padding-top: 12px;
 }
-.nav{
-    overflow-x: scroll;
-    @include hideScroll('&');
-    overflow-y:hidden;
-    flex-wrap: nowrap;
+.nav {
+  overflow-x: scroll;
+  @include hideScroll("&");
+  overflow-y: hidden;
+  flex-wrap: nowrap;
 }
 .nav-item {
   a {
@@ -53,32 +171,33 @@
     color: $purple;
   }
 }
-.collapse__title{
+.collapse__title {
   cursor: pointer;
   font-size: 16px;
   font-weight: 500;
-  .fas{
+  .fas {
     font-size: 12px;
-    transition: .5s;
+    transition: 0.5s;
   }
-  &:hover{
-    &>span:first-child{
+  &:hover {
+    & > span:first-child {
       color: $purple;
-      transition: .2s;
+      transition: 0.2s;
     }
   }
 }
-.collapse--hover{
-  p:hover{
+.collapse--hover {
+  p:hover {
     cursor: pointer;
-    span{
+    span {
       color: $purple;
-      transition: .2s;
+      transition: 0.2s;
     }
   }
 }
-.fa-play{
-  width: 32px;height: 32px;
+.fa-play {
+  width: 32px;
+  height: 32px;
   background-color: #f5f4f8;
   color: $purple;
   border-radius: 50%;
@@ -88,34 +207,32 @@
   font-size: 9px;
 }
 
-
-.rate-main{
-  h1{
+.rate-main {
+  h1 {
     font-size: 3.5rem;
   }
-  p{
-    font-size: .75rem;
+  p {
+    font-size: 0.75rem;
   }
-  .fas{
+  .fas {
     font-size: 10px;
-    color:#ffaa46;
+    color: #ffaa46;
     margin: 0 1.5px;
   }
-  
 }
-.bg-warning{
-  background-color:#ffaa46 !important;
+.bg-warning {
+  background-color: #ffaa46 !important;
 }
-.rate-stars{
-  .text-light{
-    color:#79758f !important;
-    opacity: .1;
+.rate-stars {
+  .text-light {
+    color: #79758f !important;
+    opacity: 0.1;
   }
-  .fas{
+  .fas {
     font-size: 10px;
     margin: 0 1.5px;
     margin-top: -1.5px;
-    color:#ffaa46;
+    color: #ffaa46;
   }
 }
 
@@ -124,21 +241,22 @@
   margin-bottom: 2rem;
   span {
     padding-left: 1rem;
-    top: 50%;transform: translateY(-50%);
+    top: 50%;
+    transform: translateY(-50%);
   }
   input {
-    border: 1px solid rgba($color: $secondary, $alpha: .25);
+    border: 1px solid rgba($color: $secondary, $alpha: 0.25);
     color: $black;
     border-radius: 5px;
     padding: 13px 20px 13px 40px;
-    font-size: .875rem;
+    font-size: 0.875rem;
     font-weight: 400;
     width: 264px;
     &:focus {
       outline: 5px solid rgba($color: $purple, $alpha: 0.3);
       border-color: $purple;
     }
-    @include holderColor('&',$secondary)
+    @include holderColor("&", $secondary);
   }
   @media only screen and (max-width: 992px) {
     width: 100%;
@@ -149,50 +267,47 @@
     }
   }
   .fa-search {
-    color: rgba($color: $black, $alpha: .6);
+    color: rgba($color: $black, $alpha: 0.6);
   }
 }
-.comments{
-  .fas{
+.comments {
+  .fas {
     font-size: 8px;
-    color:#ffaa46;
+    color: #ffaa46;
     margin: 0 1.5px;
   }
-  .text-muted{
-    color: #a8a3b9 !important;
-    font-size: .75rem;
-  }
-  .yes-btn{
+  .yes-btn {
     background-color: $purple;
     color: #fff;
-    font-size: .75rem;
-    padding: .4rem .8rem;
-    border-radius: .25rem;
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.25rem;
     font-weight: 600;
     text-decoration: none;
-    transition: .2s;
-    &:hover{
+    transition: 0.2s;
+    &:hover {
       background-color: #6343d8;
       border-color: #5e3fcb;
     }
   }
-  .no-btn{
-    border: 1px solid rgba($color: $secondary, $alpha: .25);
-    font-size: .75rem;
-    padding: .4rem .8rem;
-    border-radius: .25rem;
+  .no-btn {
+    border: 1px solid rgba($color: $secondary, $alpha: 0.25);
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.25rem;
     font-weight: 600;
     text-decoration: none;
-    transition: .2s;
+    transition: 0.2s;
     &:hover {
       background-color: #f5f4f8;
       border-color: #beb9cd;
       color: #5c5776;
+    }
   }
-  }
-  &>div{
-    &>img{
-      width: 3.5rem;height: 3.5rem;
+  & > div {
+    & > img {
+      width: 3.5rem;
+      height: 3.5rem;
       border-radius: 50%;
     }
   }

@@ -70,7 +70,7 @@ export var mockReviews: MockReviews[] = [
 ];
 
 var collapse: Array<boolean> = [];
-var collapseFlag = false;
+var collapseFlag = true;
 for (let season of mockSeasons) {
   if (collapseFlag) {
     collapse.push(false);
@@ -92,7 +92,7 @@ export class TabbarComponent implements OnInit {
   mockReviews = mockReviews;
   collapse = collapse;
   ngOnInit(): void {}
-  active = 3;
+  active = 1;
   last = 0;
   handleToggle(el: number) {
     if (el == this.last) {
