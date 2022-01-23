@@ -19,6 +19,20 @@
     scrollbar-width: none; /* Firefox */
   }
 }
+@mixin holderColor($el,$color){
+  #{$el}::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $color;
+    opacity: 1; /* Firefox */
+  }
+  
+  #{$el}:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $color;
+  }
+  
+  #{$el}::-ms-input-placeholder { /* Microsoft Edge */
+    color: $color;
+  }
+}
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 $purple: #754ffe;

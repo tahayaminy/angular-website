@@ -4,6 +4,8 @@ import { HeaderComponent } from './header/header.component';
 import { CourseComponent } from './course.component';
 import { TabbarComponent } from './tabbar/tabbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './filter.pipe';
 
 
 
@@ -11,7 +13,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   declarations: [
     HeaderComponent,
     CourseComponent,
-    TabbarComponent
+    TabbarComponent,
+    FilterPipe
   ],
   exports: [
     HeaderComponent,
@@ -20,7 +23,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     CommonModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ]
 })
 export class CourseModule { }

@@ -14,7 +14,7 @@ import { CourseModule } from './course/course.module';
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
