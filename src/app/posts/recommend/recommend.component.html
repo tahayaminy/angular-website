@@ -22,7 +22,7 @@
         disableOnInteraction: false
       }"
     >
-      <ng-template swiperSlide *ngFor="let card of cards"><app-cards [card]='card'></app-cards></ng-template>
+      <ng-template swiperSlide *ngFor="let card of cards;let index=index"><a style="text-decoration: none;" routerLink="course/{{index}}"><app-cards [card]='card'></app-cards></a></ng-template>
     </swiper>
     <span
       class="d-none d-md-inline custom-button-prev position-absolute fas fa-chevron-left rounded-circle"

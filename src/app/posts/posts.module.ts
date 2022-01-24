@@ -4,6 +4,7 @@ import { PostsComponent } from './posts.component';
 import { SwiperModule } from 'swiper/angular';
 import { RecommendComponent } from './recommend/recommend.component';
 import { CardsComponent } from './cards/cards.component';
+import { PostRoutingModule } from './post-routing.module';
 
 
 
@@ -18,7 +19,8 @@ import { CardsComponent } from './cards/cards.component';
   ],
   imports: [
     CommonModule,
-    SwiperModule
+    SwiperModule,
+    PostRoutingModule
   ]
 })
 export class PostsModule { }
