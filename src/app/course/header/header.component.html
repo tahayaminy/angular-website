@@ -3,7 +3,7 @@
     <div class="row px-2">
       <div class="col-lg-7 col-12 p-1">
         <h1 class="text-white mt-1 pb-2 mb-1">
-          Getting Started with JavaScript
+          {{cards[index].title}}
         </h1>
         <p class="text-white pb-4 lead mb-3">
           JavaScript is the popular programming language which powers web pages
@@ -25,12 +25,19 @@
             ><i class="fas fa-star text-warning"></i
             ><i class="fas fa-star text-warning"></i
             ><i class="fas fa-star text-warning"></i
-            ><i class="fas fa-star text-warning"></i> (140)</span
-          >
+            ><i class="fas fa-star text-warning"></i> (140)</span>
           <span class="text-white ml-4 d-none d-md-inline">
-            <i style="font-size: 16px;opacity:.8;" class="bi bi-reception-3 text-white"></i>
-            Intermediate</span
-          >
+            <i style="font-size: 16px;opacity:.8;" class="bi text-white" [ngClass]="{'bi-reception-2': cards[index].level === 1, 'bi-reception-3': cards[index].level===2,'bi-reception-4':cards[index].level===3}"></i>
+            <ng-template [ngIf]="cards[index].level==1">
+              Beginner
+            </ng-template>
+            <ng-template [ngIf]="cards[index].level==2">
+              Intermediate
+            </ng-template>
+            <ng-template [ngIf]="cards[index].level==3">
+              Advance
+            </ng-template>
+          </span>
         </div>
       </div>
     </div>

@@ -185,7 +185,7 @@
   <!-- Card -->
   <div class="card mb-3 mb-4">
       <div class="p-1">
-          <div class="youtube d-flex justify-content-center rounded border-white border" >
+          <div style="background-image: url('../{{cards[index].img}}')" class="youtube d-flex justify-content-center rounded border-white border" >
               <span class="d-flex  justify-content-center rounded-circle p-3"><i class="bi bi-play"></i></span>
           </div>
       </div>
@@ -228,13 +228,13 @@
       <div class="card-body p-4">
           <div class="d-flex align-items-center">
               <div class="position-relative">
-                  <img src="../../../assets/avatar-1.jpg" width="80px" height="80px" alt="" class="rounded-circle avatar-xl">
+                  <img src="../{{cards[index].teacherImg}}" width="80px" height="80px" alt="" class="rounded-circle avatar-xl">
                   <a href="#" class="position-absolute mt-2 ml-n3" data-bs-toggle="tooltip" data-placement="top" title="" data-bs-original-title="Verifed">
                       <img src="../assets/checked-mark.svg" alt="" height="30" width="30">
                   </a>
               </div>
               <div class="ml-4">
-                  <h4 class="mb-1">Jenny Wilson</h4>
+                  <h4 class="mb-1">{{cards[index].teacherName}}</h4>
                   <p class="mb-1 develop">Front-end Developer, Designer</p>
                   <span class="develop"><span class="text-warning">4.5</span><span class="fas fa-star text-warning mr-2"></span>Instructor Rating</span>
               </div>

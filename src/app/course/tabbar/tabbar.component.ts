@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
+import { CARDS } from 'src/app/posts/recommend/mock-cards';
 interface MockSeasons {
   season: string;
   lessons: Array<{ name: string; time: string }>;
@@ -86,6 +87,8 @@ for (let season of mockSeasons) {
   styleUrls: ['./tabbar.component.scss'],
 })
 export class TabbarComponent implements OnInit {
+  @Input() index!:number;
+  cards=CARDS;
   searchString!:string;
   constructor() {}
   mockSeasons = mockSeasons;
