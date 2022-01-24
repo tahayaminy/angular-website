@@ -4,8 +4,9 @@
     <div class="card-body pb-1">
       <h5 class="card-title">{{card.title}}</h5>
       <p class="card-text">
-        <i class="far fa-clock"></i> {{card.time}}
-        <span class="ml-3 receptions"
+        <i class="far fa-clock"></i> {{card.time}} <span class="mr-3"></span>
+        <span style="white-space: nowrap;" class="col px-0">
+          <span class="receptions"
           ><i class="bi bi-reception-4 holder"></i
           ><i [ngClass]="{'bi-reception-2': card.level === 1, 'bi-reception-3': card.level===2,'bi-reception-4':card.level===3}" class="bi value"></i
         ></span>
@@ -19,6 +20,7 @@
           <ng-template [ngIf]="card.level==3">
             Advance
           </ng-template>
+        </span>
         </span>
         <span class="span-block">
           <i class="fas fa-star text-warning"></i
