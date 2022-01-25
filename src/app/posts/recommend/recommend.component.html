@@ -1,6 +1,6 @@
 <div class="my-3 py-3"></div>
 <article class="container">
-  <h3 style="font-size: 24px;" class="ml-0 pb-1 mb-1">Recommended to you</h3>
+  <h3 style="font-size: 24px;" class="ml-0 pb-1 mb-1">{{title}}</h3>
   <section class="row position-relative">
     <swiper
       class="px-3 pt-3 pb-2"
@@ -22,7 +22,7 @@
         disableOnInteraction: false
       }"
     >
-      <ng-template swiperSlide *ngFor="let card of cards;let index=index"><a style="text-decoration: none;" routerLink="course/{{index}}"><app-cards [card]='card'></app-cards></a></ng-template>
+      <ng-template swiperSlide *ngFor="let card of cards;let index=index"><a style="text-decoration: none;" routerLink="/course/{{index}}"><app-cards [card]='card'></app-cards></a></ng-template>
     </swiper>
     <span
       class="d-none d-md-inline custom-button-prev position-absolute fas fa-chevron-left rounded-circle"

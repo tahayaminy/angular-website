@@ -9,9 +9,10 @@ import { ActivatedRoute } from '@angular/router';
 export class CourseComponent implements OnInit {
 
   constructor(private router:ActivatedRoute) { }
+  title='Related Courses';
   index!:number;
   ngOnInit(): void {
-    this.index=Number(this.router.snapshot.params['id']);
+    this.router.paramMap.subscribe(params=>this.index=Number(params.get('id')));
   }
 
 }
