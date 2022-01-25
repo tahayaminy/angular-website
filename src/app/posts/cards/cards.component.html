@@ -41,7 +41,7 @@
       <img class="img-fluid" src="{{card.teacherImg}}" />
       {{card.teacherName}}
       <span
-        (click)="bookmark=true"
+        (click)="bookmark=!bookmark"
         class="float-right mr-2"
         placement="top"
         ngbTooltip="Add to Bookmarks"
