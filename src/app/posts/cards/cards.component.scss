@@ -13,7 +13,7 @@ $receptions: #00000038;
   margin: 0 1px;
 }
   .card {
-    min-height: 410px;
+    min-height: 400px;
     @media only screen and (max-width:320px){
       min-height: 420px;
     }
@@ -27,14 +27,14 @@ $receptions: #00000038;
       min-height: 535px;
     }
     @media only screen and (min-width:931px) and (max-width:1242px){
-      min-height: 415px;
+      min-height: 390px;
     }
     border-radius: .5em;
     .card-img-top{
       border-radius: .5em .5em 0 0;
     }
     .card-title{
-      font-size: 1.3em;
+      font-size: 16px;
     }
     p {
       color: $cardtxt;
