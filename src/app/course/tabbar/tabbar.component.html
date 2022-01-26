@@ -1,7 +1,7 @@
 <section>
   <div class="container mx-auto ">
     <div class="row mtn px-3">
-      <div style="height: 100%;" class="col-lg-8 col-12 bg-white rounded">
+      <div style="height: 100%;" class="box-shadow col-lg-8 col-12 bg-white rounded">
         <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav border-bottom px-1">
           <li [ngbNavItem]="1" [class.active]="active ==1" class="nav-item mx-4 active">
             <a ngbNavLink class="nav-link py-3" href="#">Contents</a>
@@ -184,7 +184,7 @@
 <!----------->
 <div class="col-lg-4 pl-lg-4 col-md-12 col-12 mn">
   <!-- Card -->
-  <div class="card mb-3 mb-4">
+  <div class="box-shadow card mb-3 mb-4">
       <div class="p-1">
           <div style="background-image: url('../{{cards[index].img}}')" class="youtube d-flex justify-content-center rounded border-white border" >
               <span class="d-flex  justify-content-center rounded-circle p-3"><i class="bi bi-play"></i></span>
@@ -205,26 +205,26 @@
   </div>
 
   <!-- Card -->
-  <div class="card mb-4">
+  <div class="box-shadow card mb-4">
       <div class="whatsInclude">
           <!-- Card header -->
-          <div class="card-header bg-white rounded">
+          <div class="card-header bg-white rounded-top">
               <h4 class="mb-0">What’s included</h4>
           </div>
           <ul class="list-group list-group-flush">
-              <li class="list-group-item bg-transparent"><i class="bi bi-play-circle align-middle mr-2 text-primary"></i>12 hours video</li>
-              <li class="list-group-item bg-transparent"><i class="bi bi-award mr-2 align-middle text-success"></i>Certificate</li>
-              <li class="list-group-item bg-transparent"><i class="bi bi-calendar align-middle mr-2 text-info"></i>12 Article
+              <li class="list-group-item bg-transparent"><i style="color: #7752fe;" class="bi bi-play-circle align-middle mr-2"></i>12 hours video</li>
+              <li class="list-group-item bg-transparent"><i style="color: #56d8b2;" class="bi bi-award mr-2 align-middle"></i>Certificate</li>
+              <li class="list-group-item bg-transparent"><i style="color: #7fd5fb;" class="bi bi-calendar align-middle mr-2"></i>12 Article
               </li>
-              <li class="list-group-item bg-transparent"><i class="bi bi-camera-video align-middle mr-2 text-secondary"></i>Watch Offline</li>
-              <li class="list-group-item bg-transparent border-bottom-0"><i class="bi bi-clock align-middle mr-2 text-warning"></i>Lifetime access</li>
+              <li class="list-group-item bg-transparent"><i style="color: #85829a;" class="bi bi-camera-video align-middle mr-2"></i>Watch Offline</li>
+              <li class="list-group-item bg-transparent border-bottom-0"><i style="color: #ffc078;" class="bi bi-clock align-middle mr-2"></i>Lifetime access</li>
           </ul>
       </div>
   </div>
 
 
   <!-- Card -->
-  <div class="card">
+  <div class="box-shadow card">
       <!-- Card body -->
       <div class="card-body p-4">
           <div class="d-flex align-items-center">

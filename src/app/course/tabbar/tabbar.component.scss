@@ -1,5 +1,8 @@
 @import "../../../assets/ex";
-
+.box-shadow{
+  box-shadow: 0 0 3px rgba($color: #000000, $alpha: .075);
+  border: none !important;
+}
 .text-muted {
   color: #a8a3b9 !important;
   font-size: 0.75rem;
@@ -9,6 +12,9 @@
 }
 .rounded {
   border-radius: 0.5em !important;
+}
+.rounded-top{
+  border-radius: .5em .5em 0 0 !important;
 }
 .card-body {
   h4 {
